@@ -107,23 +107,13 @@
 <h2 id="4-How-to-Create-a-Domain-specific-LLM"><a href="#4-How-to-Create-a-Domain-specific-LLM" class="headerlink" title="4. How to Create a Domain-specific LLM"></a>4. How to Create a Domain-specific LLM</h2><p>Domain-specific LLM 在逐渐成为推动各个领域产生积极变革的答案。行业领先者已经将基础模型重新用于特定的应用案例。问题是如何构建一个根据你需求定制的大型语言模型？</p>
 <p>当谈到训练特定领域的模型时，并非所有组织都认为从头开始训练是可行的。在大多数情况下，对基础模型进行微调就足以以合理的准确性执行特定任务。这种方法需要较少的数据集、计算和时间。</p>
 <h3 id="4-1-Fine-tune-an-LLM-for-domain-specific-needs"><a href="#4-1-Fine-tune-an-LLM-for-domain-specific-needs" class="headerlink" title="4.1 Fine-tune an LLM for domain-specific needs"></a>4.1 Fine-tune an LLM for domain-specific needs</h3><p>当微调一个大型语言模型（LLM）时，机器学习工程师使用预先训练好的模型，如GPT和LLaMa，这些模型已经具有出色的语言能力。他们通过使用一个小型的标注数据集以较慢的学习速率来训练模型的权重。微调的原理是在保留模型最初学到的知识的同时，让模型<br>适应新数据呈现的知识。它还涉及应用强大的内容审核机制，以避免模型生成有害内容。</p>
-<h4 id="Transfer-learning"><a href="#Transfer-learning" class="headerlink" title="Transfer learning"></a>Transfer learning</h4><div style="overflow: auto">
-    <div  width: 100%;">
-        <img src="LLM/transfer_Learning.jpg" alt="左侧图片描述" style="width: 100%;">
-    </div>
-</div>
-
+<h4 id="Transfer-learning"><a href="#Transfer-learning" class="headerlink" title="Transfer learning"></a>Transfer learning</h4><p><img src="/LLM/transfer_Learning.jpg" alt="transfer_Learning"></p>
 <p>迁移学习是一种独特的技术，允许预训练模型将其知识应用于新任务。当无法收集足够的数据集来微调模型时，这种技术非常有用。在进行迁移学习时，机器学习工程师会冻结模型的现有层，并在顶部添加新的可训练层。</p>
 <p>MedPaLM是一个采用这种方法训练的领域特定模型的示例。它是建立在PaLM之上的，PaLM是一个拥有5400亿参数的语言模型，在复杂任务中表现出色。为了开发MedPaLM，谷歌使用了几种提示策略，向模型呈现了医学问题和答案的注释对。</p>
 <p>仅使用65对对话样本，谷歌就产生了一个医学专用模型，该模型在回答HealthSearchQA问题时得分合格，并且在性能上远远超过了类似模型。谷歌的方法与常规做法有所不同，常规做法是向预训练模型提供多样化的领域特定数据。</p>
 <p>虽然仍有改进空间，但谷歌的MedPalm及其后续版本MedPalm 2表明了利用创造性和成本效益的方法，对于特定任务优化LLM的可能性。</p>
-<h4 id="Retrieval-augmented-generation"><a href="#Retrieval-augmented-generation" class="headerlink" title="Retrieval-augmented generation"></a>Retrieval-augmented generation</h4><div style="overflow: auto">
-    <div  width: 100%;">
-        <img src="LLM/re.jpg" alt="左侧图片描述" style="width: 100%;">
-    </div>
-</div>
-Retrieval-augmented generation (RAG) 是一种方法，结合了预训练模型和信息检索系统的优势。这种方法利用嵌入（Embeddings）使语言模型能够执行特定上下文任务，比如问答。嵌入是文本数据的数值表示，使得可以通过编程方式查询和检索文本数据。
-
+<h4 id="Retrieval-augmented-generation"><a href="#Retrieval-augmented-generation" class="headerlink" title="Retrieval-augmented generation"></a>Retrieval-augmented generation</h4><p><img src="/LLM/re.jpg" alt="Retrieval-augmented"></p>
+<p>Retrieval-augmented generation (RAG) 是一种方法，结合了预训练模型和信息检索系统的优势。这种方法利用嵌入（Embeddings）使语言模型能够执行特定上下文任务，比如问答。嵌入是文本数据的数值表示，使得可以通过编程方式查询和检索文本数据。</p>
 <p>当实施时，模型可以从数据仓库中提取特定领域的知识，并用这些知识生成有用的回应。这在部署需要实时信息或特定行业背景的自定义模型的应用中非常有用。例如，金融机构可以应用RAG，使特定领域的模型能够生成具有实时市场趋势的报告。</p>
 
       
